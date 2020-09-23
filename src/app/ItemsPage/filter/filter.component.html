@@ -1,0 +1,288 @@
+<div class="container">
+  <div class="filter-name">
+    Filter By
+  </div>
+  <div class="filter-option">
+    <div class="checkbox-name">
+      Gender
+    </div>
+    <div class="option-checkbox">
+      <input class="checkbox-input" type="checkbox" id="male" name="male" value="Male">
+      <label class="checkbox-label" for="male">Male</label>
+    </div>
+    <div class="option-checkbox">
+      <input class="checkbox-input" type="checkbox" id="woman" name="woman" value="Woman">
+      <label class="checkbox-label" for="woman">Woman</label>
+    </div>
+  </div>
+
+  <div class="filter-option">
+    <div class="checkbox-name">
+      Preț
+    </div>
+    <div class="option-number-input">
+      <input type="text">
+      &nbsp;to&nbsp;
+      <input type="text">
+    </div>
+  </div>
+</div>
+
+<div class="filter-container">
+  <div class="filter-button">
+    <div class="filter-text">Hellow</div>
+    <div *ngIf="edited" (click)="dropDownFilter()" class="card-icon">
+      &#x02259;
+    </div>
+    <div  *ngIf="!edited" (click)="dropDownFilter()" class="card-icon">
+      &#x0225A;
+    </div>
+  </div>
+  <div class="filter-button">
+    <div class="filter-text" (click)="dropDownFilterShow()" >Nihao</div>
+  </div>
+</div>
+<div *ngIf="edited"  class="sortBy-container">
+  <div class="sortBy-content">
+    <div class="sortBy-element">
+      Rank
+    </div>
+    <div class="sortBy-element">
+      Recent
+    </div>
+    <div class="sortBy-element">
+      Discount(High To Low)
+    </div>
+    <div class="sortBy-element">
+      Price(Low to Hight)
+    </div>
+    <div class="sortBy-element">
+      Price(Hight to Low)
+    </div>
+  </div>
+</div>
+
+<div *ngIf="filter1" class="filterShow-container">
+  <div class="filterShow-textContainer">
+
+    <div class="filterShow-mainText">
+      <div class="filterShow-name">Filter</div>
+      <div class="filterShow-icon"><i class="fas fa-times" (click)="dropDownFilterShow()"></i></div>
+    </div>
+
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Gender</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('gender')"></i></div>
+    </div>
+
+    <div *ngIf="gender" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Content</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('content')"></i></div>
+    </div>
+
+    <div *ngIf="content" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Content</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('content')"></i></div>
+    </div>
+
+    <div *ngIf="content" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Content</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('content')"></i></div>
+    </div>
+
+    <div *ngIf="content" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Content</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('content')"></i></div>
+    </div>
+
+    <div *ngIf="content" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Content</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('content')"></i></div>
+    </div>
+
+    <div *ngIf="content" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Content</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('content')"></i></div>
+    </div>
+
+    <div *ngIf="content" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Content</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('content')"></i></div>
+    </div>
+
+    <div *ngIf="content" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+
+    <div class="filterShow-filtersContainer">
+      <div class="filterShow-filtersText">Content</div>
+      <div class="filterShow-filtersIcon"><i class="fas fa-arrow-down" (click)="dropDownContent('content')"></i></div>
+    </div>
+
+    <div *ngIf="content" class="filterShow-content">
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+      <div class="filterShow-contentElement">
+        <input class="filterShow-checkBoxInput" type="checkbox" id="woman" name="woman" value="Woman">
+        <label class="filterShow-checkBoxLabel" for="woman">Woman</label>
+      </div>
+    </div>
+    <button type="button" onclick="alert('Hello world!')" class="filterShow-button">Găsește</button>
+  </div>
+</div>

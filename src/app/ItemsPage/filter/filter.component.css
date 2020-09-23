@@ -1,0 +1,225 @@
+*{
+  padding-left: 7px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.filter-name{
+  padding-left: 3px;
+  padding-top: 15px;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: .05em;
+  font-style: normal;
+  font-weight: 700;
+  border-bottom: 0.3px solid #b6b6b6;
+}
+.filter-option{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.checkbox-name{
+  border-bottom: 0.3px solid #b6b6b6;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: .05em;
+  font-style: normal;
+  font-weight: 700;
+}
+.option-checkbox{
+  cursor: pointer;
+}
+.checkbox-input{
+  color: #b6b6b6;
+  cursor: pointer;
+}
+.checkbox-label{
+  font-weight: 400;
+  font-size: 15px;
+  color: #b6b6b6;
+  cursor: pointer;
+}
+.checkbox-label:hover{
+  text-decoration: underline;
+}
+.option-number-input{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  color: #b6b6b6;
+}
+input[type=text]{
+  height: 25px;
+  width: 60px;
+  text-align: center;
+  font-size:13px;
+}
+
+/*Containerul la butoanele de filtru*/
+.filter-button{
+  margin-top: 10px;
+  cursor: pointer;
+  border: 1px solid #b6b6b6;
+  display: grid;
+  grid-template-columns:65% 25%;
+  grid-template-rows: 40px;
+}
+/*Icon la butoane*/
+.card-icon{
+  color: #b6b6b6;
+  font-size: 40px;
+  align-self: center;
+  padding-bottom: 10px;
+}
+/*Cum sa fie filtrele afisate*/
+.filter-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 7vw;
+  margin:0 7vw;
+}
+/*Textul la filtre*/
+.filter-text{
+  padding-left: 5px;
+  align-self: center;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: .05em;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.sortBy-container{
+  margin-top: 3px;
+  display: grid;
+  grid-template-areas: ". sortByContent .";
+  grid-template-columns: 7vw auto 7vw;
+  grid-template-rows: auto;
+}
+.sortBy-content{
+  grid-area: sortByContent;
+  border: 1px solid #b6b6b6;
+}
+.sortBy-element {
+  color: #333;
+  font-size: 15px;
+  letter-spacing: .05em;
+  font-style: normal;
+  font-weight: 400;
+  padding: 10px 0px 10px 20px;
+}
+
+/*Containerul de baza care să facă overflow la tot */
+.filterShow-container{
+  display: grid;
+  grid-template-columns:100vw;
+  background-color: white;
+  top: 50px;
+  position: absolute;
+  border: 1px solid #b6b6b6;
+  z-index: 4;
+}
+/*Containerul intern cu spatii intre ele, unde să fie textul*/
+.filterShow-textContainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin:0 7vw;
+  position: static;
+}
+/*Containerul cu textul principal (Filter)*/
+.filterShow-mainText{
+  display: grid;
+  border-bottom: 1px solid #b6b6b6;
+  grid-template-columns: 90% 10%;
+}
+
+/*Numele la Filter*/
+.filterShow-name{
+  padding: 10px;
+  justify-self: center;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 900;
+}
+/*Icon la filter*/
+.filterShow-icon{
+  padding: 10px;
+  font-size: 19px;
+  color: #333;
+  justify-self: end;
+}
+/*Containerul pentru restul elementelor*/
+.filterShow-filtersContainer{
+  display: grid;
+  padding: 5px;
+  margin-top: 15px;
+  border: 1px solid #b6b6b6;
+  grid-template-columns: 90% 10%;
+  height: 35px;
+}
+/*Textul la restul elementelor*/
+.filterShow-filtersText{
+  color: #333;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: .05em;
+  font-style: normal;
+  font-weight: 700;
+}
+/*Icon la restul elementelor*/
+.filterShow-filtersIcon{
+  font-size: 16px;
+  color: #333;
+  justify-self: end;
+}
+
+/*Contentul din fitru elementului*/
+.filterShow-content{
+  display: grid;
+  border: 1px solid #b6b6b6;
+  margin-bottom: 15px;
+  padding: 3px;
+}
+.filterShow-checkBoxInput{
+  color: #b6b6b6;
+  cursor: pointer;
+}
+.filterShow-checkBoxLabel{
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+}
+.filterShow-checkBoxLabel>hover{
+  text-decoration: underline;
+}
+.filterShow-button{
+  height: 40px;
+  margin:15px 0;
+  background-color: yellowgreen;
+  font-size: 16px;
+  color: white;
+}
+
+
+@media (max-width: 800px) {
+  .container{
+    display: none;
+  }
+}
+@media (min-width:800px) {
+  .filter-container{
+    display: none;
+  }
+  .filterShow-container{
+    display: none;
+  }
+}

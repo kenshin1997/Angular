@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="photo-container">
+    <div class="list-photo">
+      <img *ngFor="let image of images" src="{{image}}" (mouseover)="changeMainImage($event)" (click)="changeMainImage($event)"/>
+    </div>
+    <div class="main-photo">
+      <img src="{{mainImage}}">
+    </div>
+  </div>
+  <div class="text-contaier">
+    <div>Asics</div>
+    <div>Core Run Vest Mens</div>
+    <div>21,60 Lei</div>
+    <div>Culoare</div>
+    <div>Cantitate
+      &nbsp;<i class="fas fa-minus"></i>&nbsp;
+      <input type="number" id="quantity" name="quantity" min="1" max="5">&nbsp;
+      <i class="fas fa-plus"></i>
+    </div>
+    <button type="button">Click Me!</button>
+    <div class="description">
+      <div>Descriere:</div>
+      <div>Aici este textul de descriere a unui obiect ahahaahha</div>
+    </div>
+  </div>
+  <div class="main__container">
+    <div class="carousel__container">
+      <img src="{{mainImage}}"/>
+    </div>
+    <div class="dot-container">
+      <span *ngFor="let image of images; let i = index" class="dot" (click)="changeImageCaurusel(i)"></span>
+    </div>
+  </div>
+</div>
+
+
+

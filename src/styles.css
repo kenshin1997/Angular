@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: logoFont;
+  src:url("/assets/fonts/12024.ttf");
+}
+@font-face {
+  font-family: regularFont;
+  src:url("/assets/fonts/opsnr.ttf");
+}
+@font-face {
+  font-family: lightFont;
+  src:url("/assets/fonts/opsnl.ttf");
+}
+:root {
+  font-size: 16px;
+  font-family:regularFont,Arial, Helvetica, sans-serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+body {
+  margin: 0rem;
+  padding: 0rem;
+}

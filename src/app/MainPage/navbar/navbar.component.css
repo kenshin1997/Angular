@@ -1,0 +1,139 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+nav{
+  background: #222222;
+  padding: 2px 40px 2px 70px;
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+  height: 50px;
+}
+nav h1{
+  position: absolute;
+  width: 200px;
+  top:8px;
+  left:5%;
+  color:#fff;
+  text-transform: uppercase;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end ;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 50px;
+  margin:0 15px;
+}
+nav ul li a{
+  position: relative;
+  padding: 5px 0;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+label #sing-one,
+label #sing-two{
+  font-size: 30px;
+  color: #fff;
+  float:right;
+  line-height: 50px;
+  margin-right: 50px;
+  cursor:pointer;
+  display: none;
+}
+#res-menu{
+  display: none;
+}
+nav ul .search-icon{
+  height: 40px;
+  width: 240px;
+  display: flex;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+
+nav ul .search-icon input {
+  height: 100%;
+  width: 200px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  padding:  0 10px;
+  color: #000;
+  font-size: 16px;
+}
+
+nav ul .search-icon .icon{
+  height: 100%;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-left: 1px solid #cccccc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+nav ul .search-icon .icon span {
+  color: #222222;
+  font-size: 18px;
+}
+
+nav ul .search-icon .icon:hover{
+  background: #e6e6e6;
+}
+@media (max-width: 870px) {
+  nav{
+    position: sticky;
+    top:0;
+    z-index: 10;
+  }
+  label #sing-one{
+    display: block;
+  }
+  nav ul{
+    display: inline-block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: crimson;
+    top:50px;
+    left: -100%;
+    text-align: center;
+    transition: .5s;
+    z-index: 10;
+  }
+  nav ul li{
+    display: block;
+    margin:40px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  #res-menu:checked ~ ul{
+    left: 0;
+  }
+  #res-menu:checked ~ label #sing-one{
+    display: none;
+  }
+  #res-menu:checked ~ label #sing-two{
+    display: block;
+  }
+  nav ul .search-icon{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+
