@@ -18,6 +18,7 @@ export class CorouselComponent implements OnInit {
   }
 
    onClickMe(direction: string): void{
+    console.log('Tell med why');
     switch (direction) {
       case 'left': this.i--;
                    break;
