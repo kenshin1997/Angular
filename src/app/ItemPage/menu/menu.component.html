@@ -13,9 +13,9 @@
     <div>21,60 Lei</div>
     <div>Culoare</div>
     <div>Cantitate
-      &nbsp;<i class="fas fa-minus"></i>&nbsp;
-      <input type="number" id="quantity" name="quantity" min="1" max="5">&nbsp;
-      <i class="fas fa-plus"></i>
+      &nbsp;<i class="fas fa-minus" (click)="value('minus')"></i>&nbsp;
+      <input type="number" id="quantity" name="quantity" min="0" max="5" value="{{quantity}}">&nbsp;
+      <i class="fas fa-plus" (click)="value('plus')"></i>
     </div>
     <button type="button">Click Me!</button>
     <div class="description">

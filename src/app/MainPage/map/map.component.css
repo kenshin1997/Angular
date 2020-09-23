@@ -13,7 +13,6 @@
 }
 
 .box_map{
-  background-color: yellow;
   grid-area: box_map;
 }
 .box_photo{
@@ -70,7 +69,6 @@
 @media only screen and (max-width: 600px) {
   .box {
     grid-template-columns:auto;
-    /*grid-template-rows: 200px 9rem;*/
     grid-template-columns: 1fr;
     grid-template-rows: 250px 30px 250px 60px;
     grid-template-areas:
@@ -79,7 +77,6 @@
       "box_photo"
       "photo_text";
     row-gap:20px;
-    /*grid-template-columns: 1fr 0px;*/
   }
 
 }

@@ -39,6 +39,9 @@
 #bug__product div {
   border:none;
 }
+.trash-icon {
+  cursor: pointer;
+}
 #bug__product div:first-child{
   margin-top:0px;
 }

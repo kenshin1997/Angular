@@ -15,13 +15,13 @@
       <div id="bug__product">
         <div>Asics Fade T Shirt Mens</div>
         <div>Black</div>
-        <div> <i class="far fa-trash-alt"></i> Remove</div>
+        <div class="trash-icon"> <i class="far fa-trash-alt"></i> Remove</div>
       </div>
       <div id="bug__color">Black</div>
       <div id="bug__quantity">
-        &nbsp;<i class="fas fa-minus"></i>&nbsp;
-        <input type="number" id="quantity" name="quantity" min="1" max="5">&nbsp;
-        <i class="fas fa-plus"></i>
+        &nbsp;<i class="fas fa-minus" (click)="value('minus')"></i>&nbsp;
+        <input type="number" id="quantity" name="quantity" min="0" max="5" value="{{quantity}}">&nbsp;
+        <i class="fas fa-plus" (click)="value('plus')"></i>
       </div>
       <div id="bug__price">200 Lei</div>
       <div id="bug__totalPrice">600 Lei</div>

@@ -2,12 +2,8 @@
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: auto;
-  grid-template-areas:
-   "test123 contik";
 }
-.test123{
-  grid-area: test123;
-}
+
 .container-card{
   margin: auto;
   padding: 1.6em;
