@@ -39,7 +39,7 @@
 #bug__product div {
   border:none;
 }
-.trash-icon {
+.trash__icon {
   cursor: pointer;
 }
 #bug__product div:first-child{

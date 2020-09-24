@@ -10,11 +10,19 @@ import {ItemMenuComponent} from './ItemPage/menu/menu.component';
 import { CardsComponent } from './ItemsPage/cards/cards.component';
 import { FilterComponent } from './ItemsPage/filter/filter.component';
 import { BucketComponent } from './BagPage/bucket/bucket.component';
-import { PageComponent } from './MainPage/page/page.component';
 import { CorouselComponent } from './MainPage/corousel/corousel.component';
-import {ItemsPageComponent} from './ItemsPage/page/page.component';
-import {ItemPageComponent} from './ItemPage/page/page.component';
-import {BagPageComponent} from './BagPage/page/page.component';
+import {RouterModule, Routes} from '@angular/router';
+import {MainPageComponent} from './MainPage/main-page/main-page.component';
+import {BagPageComponent} from './BagPage/bag-page/bag-page.component';
+import {ItemsPageComponent} from './ItemsPage/items-page/items-page.component';
+import {ItemPageComponent} from './ItemPage/item-page/item-page.component';
+
+const appRoutes: Routes = [
+  {path: '', component: MainPageComponent},
+  {path: 'bag', component: BagPageComponent},
+  {path: 'category/:name', component: ItemsPageComponent},
+  {path: 'product/:id', component: MainPageComponent},
+];
 
 @NgModule({
   declarations: [
@@ -23,18 +31,20 @@ import {BagPageComponent} from './BagPage/page/page.component';
     MapComponent,
     MenuComponent,
     ItemMenuComponent,
-    ItemsPageComponent,
-    ItemPageComponent,
     FooterComponent,
     CardsComponent,
     FilterComponent,
-    BagPageComponent,
     BucketComponent,
-    PageComponent,
+    BagPageComponent,
+    MainPageComponent,
+    ItemsPageComponent,
+    ItemPageComponent,
+    FooterComponent,
     CorouselComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
