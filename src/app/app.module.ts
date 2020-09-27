@@ -2,20 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './MainPage/navbar/navbar.component';
-import { MapComponent } from './MainPage/map/map.component';
-import { MenuComponent } from './MainPage/menu/menu.component';
-import { FooterComponent } from './MainPage/footer/footer.component';
-import {ItemMenuComponent} from './ItemPage/menu/menu.component';
-import { CardsComponent } from './ItemsPage/cards/cards.component';
-import { FilterComponent } from './ItemsPage/filter/filter.component';
-import { BucketComponent } from './BagPage/bucket/bucket.component';
-import { CorouselComponent } from './MainPage/corousel/corousel.component';
+import { NavbarComponent } from './pages/MainPage/navbar/navbar.component';
+import { MapComponent } from './pages/MainPage/map/map.component';
+import { MenuComponent } from './pages/MainPage/menu/menu.component';
+import { FooterComponent } from './pages/MainPage/footer/footer.component';
+import {ItemMenuComponent} from './pages/ItemPage/menu/menu.component';
+import { CardsComponent } from './pages/ItemsPage/cards/cards.component';
+import { FilterComponent } from './pages/ItemsPage/filter/filter.component';
+import { BucketComponent } from './pages/BagPage/bucket/bucket.component';
+import { CorouselComponent } from './pages/MainPage/corousel/corousel.component';
 import {RouterModule, Routes} from '@angular/router';
-import {MainPageComponent} from './MainPage/main-page/main-page.component';
-import {BagPageComponent} from './BagPage/bag-page/bag-page.component';
-import {ItemsPageComponent} from './ItemsPage/items-page/items-page.component';
-import {ItemPageComponent} from './ItemPage/item-page/item-page.component';
+import {MainPageComponent} from './pages/MainPage/main-page/main-page.component';
+import {BagPageComponent} from './pages/BagPage/bag-page/bag-page.component';
+import {ItemsPageComponent} from './pages/ItemsPage/items-page/items-page.component';
+import {ItemPageComponent} from './pages/ItemPage/item-page/item-page.component';
+import {FormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

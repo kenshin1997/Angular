@@ -58,6 +58,10 @@
   font-weight: 400;
   color: #b6b6b6;
 }
+.pay__container>form{
+  display: grid;
+  row-gap: 5px;
+}
 .item__container{
   display: flex;
   flex-direction: row;
@@ -92,6 +96,16 @@ button{
                         "product .";
 }
 
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.help-block{
+  color: crimson;
+  font-size: 12px;
+}
+button[disabled]{
+  background: #dddddd;
+}
 @media (max-width: 1200px) {
   .title div{
     font-size: 15px;

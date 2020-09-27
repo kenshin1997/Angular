@@ -37,13 +37,17 @@
       <div>Total</div>
       <div>38 Lei</div>
     </div>
+    <form (ngSubmit)="onSubmit()" #formElement="ngForm">
     <label for="fname">Numele :</label>
-    <input type="text" id="fname" name="fname">
+    <input type="text" id="fname" name="fname" ngModel required #name="ngModel">
+    <span class="help-block"   *ngIf="!name.valid && name.touched">Vă rugăm să vă introduceți numele</span>
     <label for="phone">Telefonul mobil :</label>
-    <input type="text" id="phone" name="phone">
+    <input type="text" id="phone" name="phone" ngModel required minlength="9" #phone="ngModel">
+      <span class="help-block" *ngIf="!phone.valid && phone.touched">Numărul de telefon este obligatoriu</span>
     <label for="mail">Email :</label>
-    <input type="text" id="mail" name="mail">
-    <button type="button">Cumpară</button>
+    <input type="text" id="mail" name="email" ngModel>
+    <button type="submit" [disabled]="!formElement.valid" >Cumpară</button>
+    </form>
   </div>
 </div>
 
