@@ -62,7 +62,7 @@
   font-style: normal;
 }
 .text-contaier div:nth-child(4){
-  font-weight: 700;
+  font-weight: 600;
   color:#b6b6b6;
   letter-spacing: .1em;
   text-transform: none;
@@ -70,7 +70,7 @@
   font-style: normal;
 }
 .text-contaier div:nth-child(5){
-  font-weight: 700;
+  font-weight: 600;
   color:#b6b6b6;
   letter-spacing: .1em;
   text-transform: none;
@@ -88,12 +88,12 @@ button{
   width: 90%;
   justify-self: center;
   font-weight: 700;
-  color:#b6b6b6;
+  color:white;
   letter-spacing: .1em;
   text-transform: none;
   font-size: 18px;
   font-style: normal;
-  background-color:  	#696969;
+  background-color:rgb(253 165 15);
   margin-top: 10px;
   margin-bottom: 50px;
 }
@@ -151,7 +151,16 @@ button{
   flex-direction: row;
   justify-content: center;
 }
-
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.help-block{
+  color: crimson;
+  font-size: 12px;
+}
+button[disabled]{
+  background: #dddddd;
+}
 @media (max-width: 570px) {
   .container {
     display: grid;

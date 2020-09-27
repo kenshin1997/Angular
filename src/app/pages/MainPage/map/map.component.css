@@ -20,22 +20,22 @@
 }
 .map_text{
   grid-area: map_text;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   font-style: normal;
   font-variant: small-caps;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 .text-padding{
   padding-top: 0.7rem;
 }
 .photo_text{
   grid-area: photo_text;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   font-style: normal;
   font-variant: small-caps;
-  text-transform: lowercase;
+  text-transform: uppercase;
   padding-bottom: 3rem;
 }
 
@@ -50,7 +50,7 @@
 }
 .map_text>div{
   color: #b6b6b6;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: normal;
   text-decoration: none;
   font-style: normal;
@@ -59,7 +59,7 @@
 }
 .photo_text>div{
   color: #b6b6b6;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: normal;
   text-decoration: none;
   font-style: normal;

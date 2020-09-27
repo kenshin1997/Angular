@@ -16,10 +16,11 @@ import {MainPageComponent} from './pages/MainPage/main-page/main-page.component'
 import {BagPageComponent} from './pages/BagPage/bag-page/bag-page.component';
 import {ItemsPageComponent} from './pages/ItemsPage/items-page/items-page.component';
 import {ItemPageComponent} from './pages/ItemPage/item-page/item-page.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
+  {path: 'test', component: ItemPageComponent},
   {path: 'bag', component: BagPageComponent},
   {path: 'category/:name', component: ItemsPageComponent},
   {path: 'product/:id', component: MainPageComponent},
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

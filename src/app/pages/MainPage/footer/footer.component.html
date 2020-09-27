@@ -49,13 +49,13 @@
             <div class="text">
               Email *</div>
             <input type="email" placeholder="email@mail.com" name="email" ngModel #email="ngModel" required>
-            <span class="help-block" *ngIf="!email.valid && email.touched">Emăilul este obigatoriu!</span>
+            <span class="help-block" *ngIf="!email.valid && email.touched">Cîmpul trebuie să fie completat</span>
           </div>
           <div class="msg">
             <div class="text">
               Message *</div>
-            <textarea id=".msgForm" placeholder="scrie aici..." class="textArea" rows="3" ngModel #textAreaElement="ngModel" required name="textarea"></textarea>
-            <span class="help-block" *ngIf="!textAreaElement.valid && textAreaElement.touched">Messajul trebuie să fie completat!</span>
+            <textarea id=".msgForm" placeholder="..." class="textArea" rows="3" ngModel #textAreaElement="ngModel" required name="textarea"></textarea>
+            <span class="help-block" *ngIf="!textAreaElement.valid && textAreaElement.touched">Cîmpul trebuie să fie completat</span>
             <br />
             <div class="btn">
               <button type="submit" [disabled]="!formElement.valid">Trimite</button>
