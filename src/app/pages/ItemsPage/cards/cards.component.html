@@ -1,91 +1,19 @@
 
   <div class="container-card">
-    <div class="card">
+    <div class="card" *ngFor="let item of itemsService.items">
       <div class="card-image">
         <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"/>
       </div>
       <div class="card-text">
-        <a href="#">
-          <div>Asics Core </div>
-          <div class="first-text"> Run Vest Mens </div>
-          <div class="second-text">S, M, L </div>
-          <div class="price-text">21,60 € </div>
+        <a routerLink="/product/{{item.id}}">
+          <div>{{item.name}} </div>
+          <div class="first-text">{{item.description.color}}</div>
+          <div class="second-text">{{item.characteristics.height}}x{{item.characteristics.dimension}}MM</div>
+          <div class="price-text">{{item.description.price}}</div>
         </a>
       </div>
       <div class="card-icon">
-        <a href="#">
-          <i class="fas fa-search"></i>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-image">
-        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"/>
-      </div>
-      <div class="card-text">
-        <a href="#">
-          <div>Asics Core </div>
-          <div class="first-text"> Run Vest Mens </div>
-          <div class="second-text">S, M, L </div>
-          <div class="price-text">21,60 € </div>
-        </a>
-      </div>
-      <div class="card-icon">
-        <a href="#">
-          <i class="fas fa-search"></i>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-image">
-        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"/>
-      </div>
-      <div class="card-text">
-        <a href="#">
-          <div>Asics Core </div>
-          <div class="first-text"> Run Vest Mens </div>
-          <div class="second-text">S, M, L </div>
-          <div class="price-text">21,60 € </div>
-        </a>
-      </div>
-      <div class="card-icon">
-        <a href="#">
-          <i class="fas fa-search"></i>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-image">
-        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"/>
-      </div>
-      <div class="card-text">
-        <a href="#">
-          <div>Asics Core </div>
-          <div class="first-text"> Run Vest Mens </div>
-          <div class="second-text">S, M, L </div>
-          <div class="price-text">21,60 € </div>
-        </a>
-      </div>
-      <div class="card-icon">
-        <a href="#">
-          <i class="fas fa-search"></i>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-image">
-        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"/>
-      </div>
-      <div class="card-text">
-        <a href="#">
-          <div>Asics Core </div>
-          <div class="first-text"> Run Vest Mens </div>
-          <div class="second-text">S, M, L </div>
-          <div class="price-text">21,60 € </div>
-        </a>
-      </div>
-      <div class="card-icon">
-        <a href="#">
+        <a routerLink="/product/{{item.id}}">
           <i class="fas fa-search"></i>
         </a>
       </div>

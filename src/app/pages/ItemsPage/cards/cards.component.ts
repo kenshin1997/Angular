@@ -7,8 +7,9 @@ import {ItemsService} from '../../../servicies/items.service';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  constructor(private itemsService: ItemsService) { }
+  constructor(public itemsService: ItemsService) { }
   ngOnInit(): void {
+
   }
 
 }

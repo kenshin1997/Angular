@@ -52,20 +52,23 @@
   /*text-decoration: none;*/
 }
 .card-text>a{
-  color: #c0c0c0;
+  color: #6c757d !important;
   text-decoration: none;
 }
 .first-text {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
+  text-transform: none;
 }
 .second-text{
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 300;
+  text-transform: none;
 }
 .price-text{
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
+  text-transform: none;
 }
 .card-icon >a {
   text-decoration: none;

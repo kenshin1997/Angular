@@ -17,13 +17,16 @@ import {BagPageComponent} from './pages/BagPage/bag-page/bag-page.component';
 import {ItemsPageComponent} from './pages/ItemsPage/items-page/items-page.component';
 import {ItemPageComponent} from './pages/ItemPage/item-page/item-page.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {ItemService} from './servicies/item.service';
+import {ItemsService} from './servicies/items.service';
 
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'test', component: ItemPageComponent},
   {path: 'bag', component: BagPageComponent},
   {path: 'category/:name', component: ItemsPageComponent},
-  {path: 'product/:id', component: MainPageComponent},
+  {path: 'product/:id', component: ItemPageComponent},
 ];
 
 @NgModule({
@@ -48,9 +51,10 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ItemService, ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

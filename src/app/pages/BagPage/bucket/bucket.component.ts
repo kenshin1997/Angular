@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {BucketFormInterface} from '../../../interface/BucketFormInterface';
 
 @Component({
   selector: 'app-bucket',
@@ -8,13 +9,7 @@ import {NgForm} from '@angular/forms';
 })
 export class BucketComponent implements OnInit {
   quantity: number = 0;
-  // @ts-ignore
-  // tslint:disable-next-line:new-parens
-  form: bucketForm = new class implements bucketForm {
-    email: string;
-    name: string;
-    phone: number;
-  };
+  form: BucketFormInterface;
   @ViewChild('formElement') inputForm: NgForm;
   constructor() { }
 
