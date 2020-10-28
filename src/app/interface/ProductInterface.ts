@@ -9,5 +9,5 @@ export interface Product {
   name: string;
   characteristics: Characteristics;
   description: Description;
-  photo: Photo;
+  photos: Photo[];
 }

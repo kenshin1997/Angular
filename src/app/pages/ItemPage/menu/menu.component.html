@@ -1,22 +1,22 @@
 <div class="container">
   <div class="photo-container">
     <div class="list-photo">
-      <img *ngFor="let image of images" src="{{image}}" (mouseover)="changeMainImage($event)" (click)="changeMainImage($event)"/>
+      <img *ngFor="let image of images" src="{{image.url}}" (mouseover)="changeMainImage($event)" (click)="changeMainImage($event)"/>
     </div>
     <div class="main-photo">
       <img src="{{mainImage}}">
     </div>
   </div>
   <div class="text-contaier">
-    <div>Asics</div>
-    <div>Core Run Vest Mens</div>
-    <div>21,60 Lei</div>
+    <div>{{item.name}}</div>
+    <div>{{item.category}}</div>
+    <div>{{item.description.price}} Lei</div>
     <form (ngSubmit)="onSubmit()" #formElement="ngForm">
-    <div>Culoare</div>
+    <div>{{item.description.color}}</div>
     <div>Cantitate
       &nbsp;<i class="fas fa-minus" (click)="value('minus')"></i>&nbsp;
-      <input type="number" id="quantity" name="quantity" min="1" max="5" value="{{quantity}}"
-             [ngModel]="quantity"   #quantityModel="ngModel" required>&nbsp;
+      <input type="number" id="quantity" name="quantity" min="1" max="5" value="quantity"
+             [ngModel]="quantity"   #quantityModel="ngModel" required >&nbsp;
       <i class="fas fa-plus" (click)="value('plus')"></i>
     </div>
       <span *ngIf = "quantityModel.hasError('required')" class = "help-block">Productul trebuie să conțină cel puțin o unitate</span>

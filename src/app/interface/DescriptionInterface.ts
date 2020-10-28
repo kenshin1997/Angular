@@ -3,5 +3,6 @@
   price: number;
   quantity: number;
   color: string;
+  orders: number;
   originCountry: string;
 }

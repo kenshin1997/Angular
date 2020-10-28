@@ -1,0 +1,30 @@
+.content {
+  display: grid;
+  height: 60vh;
+  grid-template-rows: 40% 60%;
+}
+.image__banner{
+  justify-self: center;
+}
+img {
+  height: 100%;
+}
+.confirmation__text{
+  width: 40%;
+  justify-self: center;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+#main__text{
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: 22px;
+  justify-self: center;
+  color: #6c757d;
+}
+#second__text{
+  color: #6c757d;
+  font-family: Open Sans ;
+  font-size: 18px;
+  justify-self: center;
+}

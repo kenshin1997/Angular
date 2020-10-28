@@ -1,5 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {ItemService} from '../../../servicies/item.service';
+import {Product} from '../../../interface/ProductInterface';
+import {BagService} from '../../../servicies/bag.service';
+import {Photo} from '../../../interface/PhotoInterface';
 
 @Component({
   selector: 'app-itemMenu',
@@ -8,21 +12,24 @@ import {NgForm} from '@angular/forms';
 })
 export class ItemMenuComponent implements OnInit {
   quantity: number = 1;
+  item: Product;
   @ViewChild('formElement') inputForm: NgForm;
-  mainImage = 'https://images.sportsdirect.com/images/products/45127203_l.jpg';
-  images: string[] = ['https://static.zerochan.net/Himura.Kenshin.full.2477478.jpg', 'https://thebestjapan.com/wp-content/uploads/2020/01/rurouni-kenshin-ten-thumb.jpg',
-    'https://i.pinimg.com/736x/b0/7e/d8/b07ed883e5ce56ca61ea960e02a760be.jpg', 'https://usercontent2.hubstatic.com/12377099_f1024.jpg', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuOH7Bajpw0iOLVigNk7koDKmOtj8IUQyDkw&usqp=CAU' ];
-  constructor() { }
+  mainImage: string;
+  images: Photo[];
+  constructor(private itemService: ItemService, private bagService: BagService) { }
   ngOnInit(): void {
+    this.item = this.itemService.item;
+    this.mainImage = this.item.photos.find(photo => photo.main === true).url;
+    this.images = this.item.photos;
   }
-
   changeMainImage(event): void {
     this.mainImage = event.currentTarget.src;
   }
   changeImageCaurusel(index): void {
-    this.mainImage = this.images[index];
+    this.mainImage = this.images[index].url;
   }
   value(sing: string): void {
+    this.quantity = this.inputForm.value.quantity;
     if (this.quantity === 1 && sing === 'minus') {
       return ;
     }
@@ -34,5 +41,13 @@ export class ItemMenuComponent implements OnInit {
     }
   }
   onSubmit(): void{
+    if (this.bagService.items.some(item => item.id === this.item.id)) {
+      console.log(true);
+      this.bagService.items.find(item => item.id === this.item.id).description.orders += this.inputForm.value.quantity;
+    }else {
+      this.item.description.orders = this.inputForm.value.quantity;
+      console.log(this.item);
+      this.bagService.items.push(this.item);
+    }
   }
 }

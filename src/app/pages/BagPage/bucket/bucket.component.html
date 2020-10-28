@@ -10,38 +10,37 @@
     </div>
     </div>
   <div class="product__container">
-    <div class="product">
-      <div id="bug__img"><img src="https://eskipaper.com/images/images-2.jpg"></div>
+    <div class="product" *ngFor="let item of bagService.items">
+      <div id="bug__img"><img src="{{item.photos | photoPipe}}"></div>
       <div id="bug__product">
-        <div>Asics Fade T Shirt Mens</div>
-        <div>Black</div>
-        <div class="trash__icon"> <i class="far fa-trash-alt"></i> Remove</div>
+        <div>{{item.name}}</div>
+        <div>{{item.description.color}}</div>
+        <div class="trash__icon"> <i class="far fa-trash-alt" (click)="deleteItem(item.id)"></i> Remove</div>
       </div>
-      <div id="bug__color">Black</div>
+      <div id="bug__color">{{item.description.color}}</div>
       <div id="bug__quantity">
-        &nbsp;<i class="fas fa-minus" (click)="value('minus')"></i>&nbsp;
-        <input type="number" id="quantity" name="quantity" min="0" max="5" value="{{quantity}}">&nbsp;
-        <i class="fas fa-plus" (click)="value('plus')"></i>
+        &nbsp;<i class="fas fa-minus" (click)="value('minus',item.id)"></i>&nbsp;
+        <input type="number" id="quantity" name="{{item.description.orders}}"  value="{{item.description.orders}}" (input)="changeTotalPrice($event,item.id)" (change)="changeTotalPrice($event,item.id)">&nbsp;
+        <i class="fas fa-plus" (click)="value('plus',item.id)"></i>
       </div>
-      <div id="bug__price">200 Lei</div>
-      <div id="bug__totalPrice">600 Lei</div>
+      <div id="bug__price">{{item.description.price}} Lei</div>
+      <div id="bug__totalPrice">{{item.description.price * item.description.orders}} Lei</div>
     </div>
   </div>
 
   <div class="pay__container">
     <div class="item__container">
-      <div>5 items</div>
-      <div>38 Lei</div>
+      <div>{{bagService.items.length}} articole</div>
     </div>
     <div class="item__container">
-      <div>Total</div>
-      <div>38 Lei</div>
+      <div>Total:</div>
+      <div>{{totalPrice}}</div>
     </div>
     <form (ngSubmit)="onSubmit()" #formElement="ngForm">
-    <label for="fname">Numele :</label>
+    <label for="fname">Numele *</label>
     <input type="text" id="fname" name="fname" ngModel required #name="ngModel">
     <span class="help-block"   *ngIf="!name.valid && name.touched">Vă rugăm să vă introduceți numele</span>
-    <label for="phone">Telefonul mobil :</label>
+    <label for="phone">Telefonul mobil *</label>
     <input type="text" id="phone" name="phone" ngModel required minlength="9" #phone="ngModel">
       <span class="help-block" *ngIf="!phone.valid && phone.touched">Numărul de telefon este obligatoriu</span>
     <label for="mail">Email :</label>
